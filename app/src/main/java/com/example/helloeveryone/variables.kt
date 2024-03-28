@@ -6,64 +6,48 @@ val numero2:Int = 2
 
 
 fun main(){
-    println("¡Hola Bienvenido a mi repositorio !, veamos funciones basicas")
-    operationBasic()
-    operationwithDecimal(23f, 23.5)
-    operationwithString()
-    operationwithContant()
-
-
-
-
-
+    println("¡Hola Bienvenido a mi repositorio !, veamos condicionales y operaciones logicas")
+    esAve()
+    esMamifero()
+    decision(18)
+    alcanzaPlata()
 }
 
-
-// Funcion sin retorno con impresion en pantalla
-fun operationBasic () {
-    val numero:Int = 4
-    val numero2:Int = 2
-    println(numero)
-    println(numero2)
-
-    println("La suma de " + numero + " Y " +numero2 + " es " +  (numero + numero2) )
-    println("La resta de " + numero + " Y " +numero2 + " es " +  (numero - numero2) )
-    println("La multiplicacion de " + numero + " Y " +numero2 + " es " +  (numero * numero2) )
-    println("La division de " + numero + " Y " +numero2 + " es " +  (numero / numero2) )
-    println(numero)
-    println(numero2)
-
-    println("La suma de " + numero + " Y " +numero2 + " es " +  (numero + numero2) )
-    println("La resta de " + numero + " Y " +numero2 + " es " +  (numero - numero2) )
-    println("La multiplicacion de " + numero + " Y " +numero2 + " es " +  (numero * numero2) )
-    println("La division de " + numero + " Y " +numero2 + " es " +  (numero / numero2) )
-
+fun esAve(){
+    val ave = "Pinguino"
+    if(ave == "Pinguino"){
+        println("Es una Ave !")
+    }
 }
 
-//Funcion con envio de dos parametros: float y double
-
-fun operationwithDecimal(numeroDecimalLargo:Float,numeroDecimalCorto:Double){
-    print(numeroDecimalLargo)
-    println(numeroDecimalCorto)
+fun esMamifero (){
+    val ballenaAzul = true
+    if(ballenaAzul == true){
+        println("No es un mamifero")
+    }
+    else{
+        println("Es un mamifero")
+    }
 }
 
-//Funcion Sin parametros con retorno String
-fun operationwithString():String{
-    //Carecter y Cadena de Caracteres
-    val resultado:String
-    val caracter:Char = '$'
-    val cadenaTexto:String = "11.000 Kg"
-    println("La papaya esta a " + caracter + " " + cadenaTexto) //usando Template
-    resultado ="La papaya esta a $caracter $cadenaTexto" //usando Template
-    return resultado
+fun decision(numero:Int){
+    if(numero > 18){
+        println("Tienes edad para tomar bebida alcoholica")
+    }
+    else{
+        println("Prohibido la venta para menores de edad")
+    }
+}
 
+fun alcanzaPlata(dinero:Double=49000.99){
+    if(dinero >= 50.000){
+        println("Compramos el forro de Goku")
+    }
+    else if(dinero>30.000){
+        println("Podemos comprar unos audifonos bonitos!")
+    }
+    else{
+        println("No alcanzo la plata :(")
+    }
 }
-//Funcion con argumentos definidos y retorno en String
-fun operationwithContant(numeroDecimalLargo: Float =23f, numeroDecimalCorto: Double =23.5):String{
-    var resultado:String
-    var intConcatenado = numeroDecimalLargo.toInt()
-    println(intConcatenado)
-    var caracterString = intConcatenado.toString()
-    resultado = caracterString
-    return resultado
-}
+
